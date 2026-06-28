@@ -1,20 +1,17 @@
-package com.Rohan.journelApp.controller;
+/*package com.Rohan.journelApp.controller;
 
 import com.Rohan.journelApp.entity.JournelEntry;
 import com.Rohan.journelApp.service.JournelEntryService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @RestController  //
 @RequestMapping("/journel")
-public class JournelEntryControllerV3 {
+public class JournelEntryControllerV2 {
 
     @Autowired
     private JournelEntryService journelEntryService;
@@ -28,13 +25,13 @@ public class JournelEntryControllerV3 {
     @PostMapping  //POST
     public JournelEntry createEntry(@RequestBody JournelEntry myEntry){
         myEntry.setDate(LocalDateTime.now());
-        journelEntryService.saveEntry(myEntry);
+    journelEntryService.saveEntry(myEntry);
         return myEntry;
     }
 
     @GetMapping("id/{myId}")
     public JournelEntry getJournelEntryById(@PathVariable ObjectId myId){
-       return journelEntryService.findById(myId).orElse(null);
+        return journelEntryService.findById(myId).orElse(null);
 
     }
 
@@ -58,3 +55,4 @@ public class JournelEntryControllerV3 {
         return old;
     }
 }
+*/
